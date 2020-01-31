@@ -9,6 +9,11 @@ export const data1 = {
       label: 'Population',
       data: [110, 200, 300, 400, 500],
       backgroundColor: colors
+    },
+    {
+      label: 'Population',
+      data: [117, 277, 377, 477, 577],
+      backgroundColor: colors
     }
   ]
 };

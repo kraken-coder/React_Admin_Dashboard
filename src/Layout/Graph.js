@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import {
-  Bar,
   HorizontalBar,
   Pie,
   Doughnut,
@@ -13,6 +14,7 @@ import {
 
 import { makeStyles } from '@material-ui/core/styles';
 import styles from '../assets/Styles/components/card';
+import { blackColor } from '../Utils/Colors';
 const useStyles = makeStyles(styles);
 
 export const LineChart = (props) => {
@@ -21,6 +23,7 @@ export const LineChart = (props) => {
     <div className={classes.cardInner}>
       <Line
         data={props.data}
+        height={props.height}
         option={{
           title: {
             display: true,
@@ -29,6 +32,9 @@ export const LineChart = (props) => {
           legend: {
             display: true,
             position: 'right'
+          },
+          layout: {
+            color: blackColor(800)
           }
         }}
       />
@@ -175,4 +181,32 @@ export const BubbleChart = (props) => {
       />
     </div>
   );
+};
+
+BubbleChart.propType = {
+  data: PropTypes.object.isRequired
+};
+PieChart.propType = {
+  data: PropTypes.object.isRequired
+};
+
+DoughnutChart.propType = {
+  data: PropTypes.object.isRequired
+};
+
+HorizontalChart.propType = {
+  data: PropTypes.object.isRequired
+};
+
+ScatterChart.propType = {
+  data: PropTypes.object.isRequired
+};
+RadarChart.propType = {
+  data: PropTypes.object.isRequired
+};
+PolarChart.propType = {
+  data: PropTypes.object.isRequired
+};
+LineChart.propType = {
+  data: PropTypes.object.isRequired
 };

@@ -1,5 +1,5 @@
 import { boxShadow } from '../../../Utils/boxShadow';
-import { blackColor, primaryColor } from '../../../Utils/Colors';
+import { blackColor } from '../../../Utils/Colors';
 
 const color = blackColor(500);
 const styles = (theme) => ({
@@ -33,7 +33,10 @@ const styles = (theme) => ({
     position: 'absolute',
     top: '-2%',
     left: '6%',
-    borderRadius: '0.5em'
+    borderRadius: '0.5em',
+    [theme.breakpoints.down('sm')]: {
+      display: 'none'
+    }
   },
   nums: {
     textAlign: 'center',

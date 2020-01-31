@@ -1,11 +1,12 @@
 import React from 'react';
 // Importing Material UI
-import { makeStyles } from '@material-ui/core/styles';
+// import { makeStyles } from '@material-ui/core/styles';
 
 //   importing Core components
 import Grid from '@material-ui/core/Grid';
 import CardAdmin from '../../components/Card/CardAdmin';
 import CardInfo from '../../components/Card/CardInfo';
+import Tables from './../../components/Table/Table';
 
 //  material colors
 import { primaryColor, secondaryColor, blackColor } from '../../Utils/Colors';
@@ -13,11 +14,9 @@ import { primaryColor, secondaryColor, blackColor } from '../../Utils/Colors';
 import { data1, data2 } from '../../Variables/GraphData';
 
 // importing Core styles
-import styles from '../../assets/Styles/components/card';
 import Styled from 'styled-components';
-const useStyles = makeStyles(styles);
+
 const DashBoard = () => {
-  const classes = useStyles();
   return (
     <>
       <CardContainer>
@@ -50,17 +49,15 @@ const DashBoard = () => {
         </Grid>
         {/* second section  */}
         <Grid container justify='center' spacing={3}>
+          <Grid item xs={12} sm={6} md={7}>
+            <CardInfo type={'L'} data={data1} height={106} />
+          </Grid>
           <Grid item xs={12} sm={6} md={5}>
-            <CardInfo type={'L'} data={data1} />
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
             <CardInfo type={'D'} data={data2} />
-          </Grid>
-          <Grid item xs={12} sm={6} md={3}>
-            <CardInfo type={'H'} data={data2} />
           </Grid>
         </Grid>
       </CardContainer>
+      <Tables />
     </>
   );
 };

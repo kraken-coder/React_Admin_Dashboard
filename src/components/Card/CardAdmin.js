@@ -8,11 +8,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardContent from '@material-ui/core/CardContent';
-import Divider from '@material-ui/core/Divider';
 
 // @material colors
-
-import { primaryColor, secondaryColor, blackColor } from '../../Utils/Colors';
 
 import PhoneLocked from '@material-ui/icons/PhoneLocked';
 //  importing card styles
@@ -48,6 +45,13 @@ const CardAdmin = (props) => {
       </Card>
     </div>
   );
+};
+
+CardAdmin.propType = {
+  title: PropTypes.string.isRequired,
+  color: PropTypes.func.isRequired,
+  num: PropTypes.string.isRequired,
+  growth: PropTypes.string.isRequired
 };
 
 export default CardAdmin;

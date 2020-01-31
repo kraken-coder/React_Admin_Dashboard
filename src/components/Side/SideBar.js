@@ -19,7 +19,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Button from '@material-ui/core/Button';
 const useStyles = makeStyles(styles);
 
-const SideBar = ({ routes, img }) => {
+const SideBar = ({ routes }) => {
   const classes = useStyles();
   const activeRoute = (routeName) => {
     return window.location.href.indexOf(routeName) > -1 ? true : false;

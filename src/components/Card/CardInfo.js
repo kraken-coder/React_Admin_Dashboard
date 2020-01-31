@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 //  @ material Helpers
 import { makeStyles } from '@material-ui/core/styles';
@@ -19,7 +20,7 @@ import styles from '../../assets/Styles/components/card';
 
 // const charts = [DoughnutChart, LineChart, PieChart];
 
-const chartItem = (type, data) => {
+const chartItem = (type, data, height) => {
   if (type === 'D') {
     return <DoughnutChart data={data} />;
   }
@@ -27,7 +28,7 @@ const chartItem = (type, data) => {
     return <PieChart data={data} />;
   }
   if (type === 'L') {
-    return <LineChart data={data} />;
+    return <LineChart data={data} height={height} />;
   }
   if (type === 'S') {
     return <ScatterChart data={data} />;
@@ -44,15 +45,21 @@ const chartItem = (type, data) => {
 };
 const useStyles = makeStyles(styles);
 
-const CardInfo = ({ data, type }) => {
+const CardInfo = ({ data, type, height }) => {
   const classes = useStyles();
   return (
     <div>
       <Card>
-        <div className={classes.cardInfo}>{chartItem(type, data)}</div>
+        <div className={classes.cardInfo}>{chartItem(type, data, height)}</div>
       </Card>
     </div>
   );
+};
+
+CardInfo.propType = {
+  height: PropTypes.number.isRequired,
+  data: PropTypes.object.isRequired,
+  type: PropTypes.string.isRequired
 };
 
 export default CardInfo;

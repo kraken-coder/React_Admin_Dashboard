@@ -20,7 +20,7 @@ const styles = (theme) => ({
     bottom: '0',
     left: '0',
     zIndex: '1',
-    backgroundColor: primaryColor(500),
+    backgroundColor: blackColor(900),
     overflow: 'hidden',
 
     [theme.breakpoints.up('md')]: {

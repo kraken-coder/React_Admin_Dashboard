@@ -6,7 +6,6 @@ import { makeStyles } from '@material-ui/core/styles';
 //  @@ material  UI Core components
 import AppBar from '@material-ui/core/AppBar';
 import ToolBar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 
 // @ components
