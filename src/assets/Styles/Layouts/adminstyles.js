@@ -11,6 +11,9 @@ const styles = (theme) => ({
     [theme.breakpoints.up('md')]: {
       width: `calc(100% - ${drawerWidth}px)`
     },
+    [theme.breakpoints.down('md')]: {
+      width: '100%'
+    },
     overflow: 'auto',
     position: 'relative',
     float: 'right',

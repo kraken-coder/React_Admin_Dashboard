@@ -21,25 +21,25 @@ import styles from '../../assets/Styles/components/card';
 // const charts = [DoughnutChart, LineChart, PieChart];
 
 const chartItem = (type, data, height) => {
-  if (type === 'D') {
+  if (type === 'doughnut') {
     return <DoughnutChart data={data} />;
   }
-  if (type === 'P') {
+  if (type === 'pie') {
     return <PieChart data={data} />;
   }
-  if (type === 'L') {
+  if (type === 'line') {
     return <LineChart data={data} height={height} />;
   }
-  if (type === 'S') {
+  if (type === 'scatter') {
     return <ScatterChart data={data} />;
   }
-  if (type === 'H') {
+  if (type === 'horizontal') {
     return <HorizontalChart data={data} />;
   }
-  if (type === 'B') {
+  if (type === 'bubble') {
     return <BubbleChart data={data} />;
   }
-  if (type === 'R') {
+  if (type === 'radar') {
     return <RadarChart data={data} />;
   }
 };

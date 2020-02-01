@@ -1,16 +1,14 @@
-import {
-  primaryColor,
-  blackColor,
-  secondaryColor
-} from '../../../Utils/Colors';
+import { primaryColor, blackColor } from '../../../Utils/Colors';
 import { boxShadow } from '../../../Utils/boxShadow';
 const drawerWidth = 260;
 
-console.log(boxShadow(10, 10, '#0000'));
 const styles = (theme) => ({
   drawer: {
     width: drawerWidth,
-    boxShadow: boxShadow(0, 10, 10, '#0000')
+    boxShadow: boxShadow(0, 10, 10, '#0000'),
+    [theme.breakpoints.down('md')]: {
+      display: ' none'
+    }
   },
   drawerPaper: {
     width: drawerWidth,

@@ -21,7 +21,7 @@ const DashBoard = () => {
     <>
       <CardContainer>
         <Grid container spacing={4} justify='center'>
-          <Grid item xs={12} sm={6} md={4} lg={4}>
+          <Grid item xs={12} sm={12} md={4} lg={4}>
             {' '}
             <CardAdmin
               color={primaryColor(500)}
@@ -30,7 +30,7 @@ const DashBoard = () => {
               growth={'+2.5%'}
             />
           </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={4}>
+          <Grid item xs={12} sm={12} md={4} lg={4}>
             <CardAdmin
               color={secondaryColor(900)}
               title={'Spendings'}
@@ -38,7 +38,7 @@ const DashBoard = () => {
               growth={'-31.8%'}
             />
           </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={4}>
+          <Grid item xs={12} sm={12} md={4} lg={4}>
             <CardAdmin
               color={blackColor(900)}
               title={'Tasks'}
@@ -49,11 +49,11 @@ const DashBoard = () => {
         </Grid>
         {/* second section  */}
         <Grid container justify='center' spacing={3}>
-          <Grid item xs={12} sm={6} md={7}>
-            <CardInfo type={'L'} data={data1} height={106} />
+          <Grid item xs={12} sm={12} md={7}>
+            <CardInfo type={'line'} data={data1} height={106} />
           </Grid>
-          <Grid item xs={12} sm={6} md={5}>
-            <CardInfo type={'D'} data={data2} />
+          <Grid item xs={12} sm={12} md={5}>
+            <CardInfo type={'doughnut'} data={data2} />
           </Grid>
         </Grid>
       </CardContainer>

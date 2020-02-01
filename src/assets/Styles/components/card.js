@@ -23,19 +23,22 @@ const styles = (theme) => ({
   },
   container: {
     position: 'relative',
-    padding: '1.5em 0.5em 1.5em 0.5em'
+    padding: '1.5em 0.5em 1.5em 0.5em',
+    [theme.breakpoints.down('md')]: {
+      display: 'flex',
+      justifyContent: 'space-between'
+    }
   },
   heading: {
     marginTop: '1em'
   },
   iconContainer: {
-    padding: '10px',
-    position: 'absolute',
-    top: '-2%',
-    left: '6%',
-    borderRadius: '0.5em',
-    [theme.breakpoints.down('sm')]: {
-      display: 'none'
+    [theme.breakpoints.up('sm')]: {
+      padding: '10px',
+      position: 'absolute',
+      top: '-2%',
+      left: '6%',
+      borderRadius: '0.5em'
     }
   },
   nums: {

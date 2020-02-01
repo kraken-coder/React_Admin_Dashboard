@@ -37,7 +37,7 @@ const NavBar = ({ routes }) => {
         <ToolBar>
           <AppContainer>
             <div className={classes.title}>
-              <Button>{pageName()}</Button>
+              <Button className={classes.btn}>{pageName()}</Button>
             </div>
             <div>
               <AccountSettings />

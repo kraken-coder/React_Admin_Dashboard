@@ -3,6 +3,9 @@ const styles = (theme) => ({
   title: {
     fontSize: '12px',
     color: 'black',
+    [theme.breakpoints.down('md')]: {
+      color: 'white'
+    },
     textTransform: 'lowercase'
   },
   search: {
@@ -10,6 +13,9 @@ const styles = (theme) => ({
     '&:hover': {
       width: 250,
       transition: 'all 150ms ease 0s'
+    },
+    [theme.breakpoints.down('md')]: {
+      display: 'none'
     }
   },
 
@@ -24,7 +30,10 @@ const styles = (theme) => ({
     color: 'red'
   },
   notificationIcon: {
-    color: 'black'
+    color: 'black',
+    [theme.breakpoints.down('md')]: {
+      color: 'white'
+    }
   },
   containerItem: {
     margin: '0 10px 0 10px'
